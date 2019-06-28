@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="../static/css/styles.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Bree+Serif&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Alef|Quantico&display=swap" rel="stylesheet">
+    <title>Gender and Faces</title>
+</head>
+
+<body>
+    <div class="jumbotron jumbotron-fluid">
+        <div class="container" id="jumbot">
+          <h1 class="display-4">Gender Recognition Machine Learning Project</h1>
+          <p class="lead">Presented by "The Abandoned"<br> Julian Yanez, Trevor Kulbeth, Kelly McVey & Connor Crossey</p>
+          <a href="/" class="btn btn-dark">Home</a>
+          <a href="/about_us" class="btn btn-dark">About Us</a>
+        </div>
+      </div>
+    <section>
+      <div class="container-fluid">
+        <div class="row justify-content-md-center">
+          <div class="col col-lg-4">
+                <h2>Can a computer know your gender from your face?</h2>
+                <p><strong>The answer for that question in infaticatly YES!</strong><br><br> For our 'Machine Learning Project', we trained a data set of approximately 13,000 images of peoples faces to help us build a model which can recognize a gender, based on the webcam feature below.</p>
+          </div>
+          <div class="col-md-6">
+                <img src="{{ url_for('video_feed') }}" />
+          </div>
+          <!-- <div class="col col-lg-2">
+            3 of 3
+          </div>
+        </div>
+        <div class="row">
+          <div class="col">
+            1 of 3
+          </div>
+          <div class="col-md-auto">
+            Variable width content
+          </div>
+          <div class="col col-lg-2">
+            3 of 3
+          </div>
+        </div> -->
+      </div>
+    </section>
+    
+    
+</body>
+</html>
