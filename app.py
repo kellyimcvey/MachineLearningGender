@@ -1,14 +1,27 @@
 from flask import Flask, render_template, Response, jsonify
 from camera import VideoCamera
 import cv2
+from keras import backend as K
+import keras
 
 app = Flask(__name__)
 
-video_stream = VideoCamera()
+model = None
+graph = None
 
 @app.route('/')
 def index():
     return render_template('index.html')
+
+def load_model():
+    global model
+    global graph
+    model = keras.models.load_model("gender_model.h5")
+    graph = K.get_session().graph
+
+load_model()
+
+video_stream = VideoCamera(model,graph)
 
 def gen(camera):
     while True:
