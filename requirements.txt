@@ -7,3 +7,5 @@ opencv-python==4.1.0.25
 Pillow==6.0.0
 tensorflow==1.13.1
 Theano==1.0.4
+gunicorn==19.9.0
+
