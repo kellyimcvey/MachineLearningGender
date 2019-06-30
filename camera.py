@@ -41,8 +41,9 @@ class VideoCamera(object):
         # DO WHAT YOU WANT WITH TENSORFLOW / KERAS AND OPENCV
         # print(frame.shape)
         # detects faces with mtcnn. If no face detected. Except catches error and returns normal webcam image
-        results = self.detector.detect_faces(frame)
-        if len(results)==0:
+        try:
+            results = self.detector.detect_faces(frame)
+        except:
             ret, jpeg = cv2.imencode('.jpg', frame)
             return jpeg.tobytes()
         # getting outline of face
