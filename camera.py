@@ -46,6 +46,9 @@ class VideoCamera(object):
         except:
             ret, jpeg = cv2.imencode('.jpg', frame)
             return jpeg.tobytes()
+        if len(results)==0:
+            ret, jpeg = cv2.imencode('.jpg', frame)
+            return jpeg.tobytes()
         # getting outline of face
         imshape = frame.shape
         x1, y1, width, height = results[0]['box']
