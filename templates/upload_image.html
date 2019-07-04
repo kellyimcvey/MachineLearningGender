@@ -17,12 +17,11 @@
         <div class="container" id="jumbot">
           <h1 class="display-4">Gender Recognition Machine Learning Project</h1>
           <p class="lead">Presented by "The Abandoned"<br> Julian Yanez, Trevor Kulbeth, Kelly McVey & Connor Crossey</p>
-          <!-- <a href="/" class="btn btn-dark">Home</a>
-          <a href="/about_us" class="btn btn-dark">About Us</a> -->
         </div>
       </div>
-      <nav class="navbar navbar-expand-sm navbar-light">
-          <!-- <a class="navbar-brand" href="/">Home</a> -->
+
+      <nav class="navbar navbar-expand-sm navbar-light bg-light" style="background-color: teal;">
+          <!-- <a class="navbar-brand" href="#">Home</a> -->
           <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
           </button>
@@ -31,43 +30,41 @@
               <a class="nav-item nav-link active" href="/">Home <span class="sr-only">(current)</span></a>
               <a class="nav-item nav-link" href="/upload_image">Upload Image</a>
               <a class="nav-item nav-link" href="/about_us">About Us</a>
-              <!-- <a class="nav-item nav-link" href="#">Pricing</a>
-              <a class="nav-item nav-link disabled" href="#">Disabled</a> -->
             </div>
           </div>
         </nav>
     <section>
       <div class="container">
         <div class="row justify-content-md-center">
-          <!-- Project introduction -->
-          <div class="col col-lg-12">
-                <h2>Can a computer know your gender from your face?</h2>
-                <p><strong>The answer for that question is infaticatly YES!</strong><br><br> For our 'Machine Learning Project', we trained a data set of approximately 13,000 images of peoples faces to help us build a model which can recognize a gender, based on the webcam feature below.</p>
-          </div>
+            <div class="col-md-12">
+                <!-- Code for uploading an image to the server -->
+                  <h2>Upload an Image</h2>
+                  <p>In this section you can upload from any image for your computer.</p>
+                  <hr>
+                  <form action="/upload_image" method="POST" enctype="multipart/form-data">
+                    <input type="file" id="image" name="file"/>
+                    <input type="submit" value="Save File"/>
+                  </form>
+                  <hr>
+                  {% with messages = get_flashed_messages() %}
+                  {% if messages %}
+                    <div class=flashes>
+                    {% for message in messages %}
+                      <p>{{ message }}</p>
+                    {% endfor %}
+                    </div>
+                  {% endif %}
+                  {% endwith %}
+                  <hr>
+                  <!-- Calls a javascript file to output image to webpage for viewing. -->
+                  <script src="{{url_for('static', filename='js/app.js')}}"></script>  
+                  <div>
+                    <!-- Placeholder image to display -->
+                    <img src="../static/images/family.jpg" id="output" width="100%" />
+                  </div>
+              </div>
         </div>
-        <div class="row">
-          <div class="col-md-12">
-            <!-- Live Webcam feed for taking pictures live -->
-            <h2>Machine Learning on the fly</h2>
-            <p>Stand in front of this computer. With the webcam initalized our machine learning model can detect faces and quickly determine gender. Did it get it right?</p>
-            <hr>
-            <input type="submit" value="Find Face"/>
-            <hr>
-            <img src="{{ url_for('video_feed') }}" />
-          </div>
-          <!-- <div class="col-md-auto">
-            Variable width content
-          </div>
-          <div class="col col-lg-2">
-            3 of 3
-          </div> -->
-        </div>
-        <!-- <div class="row">
-          <div class="col col-md-12">
-              <input type="submit" value="Make a Predicition"/>
-          </div> -->
-
-        </div>
+        <hr>
       </div>
     </section>
     

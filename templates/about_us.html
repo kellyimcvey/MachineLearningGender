@@ -17,12 +17,10 @@
         <div class="container" id="jumbot">
           <h1 class="display-4">Gender Recognition Machine Learning Project</h1>
           <p class="lead">Presented by "The Abandoned"<br> Julian Yanez, Trevor Kulbeth, Kelly McVey & Connor Crossey</p>
-          <!-- <a href="/" class="btn btn-dark">Home</a>
-          <a href="/about_us" class="btn btn-dark">About Us</a> -->
         </div>
       </div>
-      <nav class="navbar navbar-expand-sm navbar-light">
-          <!-- <a class="navbar-brand" href="/">Home</a> -->
+      <nav class="navbar navbar-expand-sm navbar-light bg-light" style="background-color: teal;">
+          <!-- <a class="navbar-brand" href="#">Navbar</a> -->
           <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
           </button>
@@ -37,30 +35,47 @@
           </div>
         </nav>
     <section>
-      <div class="container">
+      <div class="container-fluid">
         <div class="row justify-content-md-center">
           <!-- Project introduction -->
           <div class="col col-lg-12">
-                <h2>Can a computer know your gender from your face?</h2>
-                <p><strong>The answer for that question is infaticatly YES!</strong><br><br> For our 'Machine Learning Project', we trained a data set of approximately 13,000 images of peoples faces to help us build a model which can recognize a gender, based on the webcam feature below.</p>
+                <h2 class="title">Our Team</h2>
           </div>
         </div>
+        <hr>
         <div class="row">
-          <div class="col-md-12">
+          <div class="col-md-3">
             <!-- Live Webcam feed for taking pictures live -->
-            <h2>Machine Learning on the fly</h2>
-            <p>Stand in front of this computer. With the webcam initalized our machine learning model can detect faces and quickly determine gender. Did it get it right?</p>
+            <img class="profile_pic" src="../static/images/trevor.jfif" />
             <hr>
-            <input type="submit" value="Find Face"/>
+            <h3 class="name">Trevor Kulbeth</h3>
+            <p>Add something here</p>
             <hr>
-            <img src="{{ url_for('video_feed') }}" />
           </div>
-          <!-- <div class="col-md-auto">
-            Variable width content
+          <div class="col-md-3">
+            <!-- Live Webcam feed for taking pictures live -->
+            <img class="profile_pic" src="../static/images/Portrait_Placeholder.png" />
+            <hr>
+            <h3 class="name">Julian Yanez</h3>
+            <p>Add something here</p>
+            <hr>
           </div>
-          <div class="col col-lg-2">
-            3 of 3
-          </div> -->
+          <div class="col-md-3">
+            <!-- Live Webcam feed for taking pictures live -->
+            <img class="profile_pic" src="../static/images/connor.jfif" />
+            <hr>
+            <h3 class="name">Connor Crossey</h3>
+            <p>Add something here</p>
+            <hr>
+          </div>
+          <div class="col-md-3">
+            <!-- Live Webcam feed for taking pictures live -->
+            <img class="profile_pic" src="../static/images/kelly.jfif" />
+            <hr>
+            <h3 class="name">Kelly McVey</h3>
+            <p>Add something here</p>
+            <hr>
+          </div>
         </div>
         <!-- <div class="row">
           <div class="col col-md-12">
