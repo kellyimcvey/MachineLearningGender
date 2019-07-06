@@ -5,10 +5,30 @@
 /* Styling for HTML elements */
 
 /* Main Components*/
+nav.navbar.navbar-expand-sm.navbar-light {
+  background-color: #912e2e!important;
+}
 
-.jumbotron {
-  background-image: url("../img/faces.jpg");
+nav.nav-item.nav-link {
+  color: antiquewhite;
+}
+
+.jumbotron.jumbotron-fluid {
+  margin-bottom: 0px;
+  background-image: url("../images/faces2.png");
   background-size: cover;
+  /* object-position: 100% 0; */
+  /* height: 390px; */
+}
+
+img.profile_pic {
+  width: 90%;
+  height: auto;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  /* object-fit: cover; */
+  
 }
 
 body, html {
@@ -26,6 +46,11 @@ body {
   line-height: 150%;
   color: #333;
   background: #6699ff;
+}
+
+.col {
+  padding-left: 25px;
+  padding-right: 25px;
 }
 
 .lead {
@@ -63,6 +88,19 @@ h1 {
 
 h2 {
   font-size: 24px;
+}
+
+h2.title {
+  text-align: center;
+}
+
+h3.name {
+  font-size: 18px;
+  text-align: center;
+}
+
+p {
+  text-align: center;
 }
 
 a {
