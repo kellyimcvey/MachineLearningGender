@@ -53,11 +53,11 @@ class VideoCamera(object):
         imshape = frame.shape
         x1, y1, width, height = results[0]['box']
         a,b,c,d = x1,y1,(x1+width),(y1+height) #Box for display only
-        x1 = int(0.5*x1)
-        y1 = int(0.5*y1)
+        # x1 = int(0.5*x1)
+        # y1 = int(0.5*y1)
         x2, y2 = x1 + width, y1 + height
-        x2 = int(x2+0.5*(imshape[1]-x2))
-        y2 = int(y2+0.5*(imshape[0]-y2))
+        # x2 = int(x2+0.5*(imshape[1]-x2))
+        # y2 = int(y2+0.5*(imshape[0]-y2))
         # cropping to face
         face = frame[y1:y2, x1:x2]
         # about bounding box
